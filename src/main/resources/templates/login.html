@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<!--@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column
+    private String userName;
+    @Column
+    private String password;
+    @Column
+    private String sex;
+    @Column
+    private String email;
+    @Column
+    private String name;
+    @Column
+    private String idcard;
+    @Column
+    private String account;
+    @OneToMany(targetEntity = Orders.class, cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name="users_id")
+    private List<Orders> ordersList;
+    -->
+<form action="/login" method="post">
+  <table align="center" border="1px">
+      <tr>
+          <center><td colspan="2">用户注册信息表</td></center>
+      </tr>
+      <tr>
+          <td>用户名:</td>
+          <td><input name="userName" type="text"/></td>
+      </tr>
+      <tr>
+          <td>密码:</td>
+          <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+          <td>性别:</td>
+          <td>
+              <input type="radio" name="sex" value="男">男
+              <input type="radio" name="sex" value="女">女
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <button type="submit">登录</button>
+          </td>
+          <td>
+              <button></button>
+          </td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>

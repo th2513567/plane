@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2 th:text="${session.users.userName}"></h2>
+</div>
+<table>
+    <tr>
+        <td>序号</td>
+        <td>用户名</td>
+        <td>邮箱</td>
+    </tr>
+    <tr  th:each="user,userStat : ${userList}">
+        <td th:text="${userStat.index}">test@test.com.cn</td>
+        <td th:text="${user.userName}">Onions</td>
+        <td th:text="${user.email}">test@test.com.cn</td>
+    </tr>
+</table>
+
+</body>
+</html>
